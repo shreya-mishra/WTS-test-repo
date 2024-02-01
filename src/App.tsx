@@ -6,11 +6,18 @@ import {tanksArr} from './constant/TankConstants';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Water Tank Simulation</Text>
+    <View testID="container" style={styles.container}>
+      <Text testID="title" style={styles.title}>
+        Water Tank Simulation
+      </Text>
       <View style={styles.tankRow}>
         {tanksArr.map((level, index) => (
-          <TankFrame key={index} level={level} index={index} />
+          <TankFrame
+            testID={`tank-frame ${index}`}
+            key={index}
+            level={level}
+            index={index}
+          />
         ))}
       </View>
     </View>
