@@ -1,12 +1,13 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import {COLORS} from './constant/Colors';
+import TankFrame from './components/TankFrame';
 
 const App = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Water Tank Simulation</Text>
-      {/* <TankFrame quantity/> */}
+      <TankFrame level={10.0} />
     </View>
   );
 };
@@ -15,6 +16,7 @@ export default App;
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: COLORS.color_background,
   },
   title: {
