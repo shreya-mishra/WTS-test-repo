@@ -5,9 +5,10 @@ const {width} = Dimensions.get('screen');
 
 const Tank = ({level}: {level: number}) => {
   return (
-    <View style={styles.tank}>
+    <View testID="tank-container" style={styles.tank}>
       <View style={styles.text}>
         <Text
+          testID="tank-text"
           style={{
             color: level > 700 ? COLORS.color_background : COLORS.color_100,
           }}>
