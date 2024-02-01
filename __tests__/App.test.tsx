@@ -16,3 +16,18 @@ test('renders correctly', () => {
     expect(tankFrame).toBeDefined();
   }
 });
+test('applies styles correctly', () => {
+  const {getByTestId} = render(<App />);
+
+  const container = getByTestId('container');
+  expect(container).toHaveStyle({backgroundColor: COLORS.color_background});
+
+  const title = getByTestId('title');
+  expect(title).toHaveStyle({
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: COLORS.color_water,
+    marginTop: 10,
+    marginBottom: 20,
+  });
+});
