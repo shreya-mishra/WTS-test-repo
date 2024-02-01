@@ -4,7 +4,7 @@ import Tank from './Tank';
 
 const {width} = Dimensions.get('screen');
 
-const TankFrame = ({allTankLevel}: {allTankLevel: [level: number]}) => {
+const TankFrame = ({allTankLevel}: {allTankLevel: number[]}) => {
   return (
     <View style={styles.container}>
       {allTankLevel.map((level, index) => (
