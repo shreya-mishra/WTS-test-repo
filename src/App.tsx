@@ -8,7 +8,11 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Water Tank Simulation</Text>
-      <TankFrame allTankLevel={tanksArr} />
+      <View style={styles.tankRow}>
+        {tanksArr.map((level, index) => (
+          <TankFrame key={index} level={level} index={index} />
+        ))}
+      </View>
     </View>
   );
 };
@@ -27,5 +31,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 20,
+  },
+  tankRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap',
   },
 });
