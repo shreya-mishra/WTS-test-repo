@@ -80,9 +80,16 @@ To learn more about React Native, take a look at the following resources:
 
 
 ### TODOs
-- [ ] Tank to display
-- [ ] Tank 
-- [ ] Each tank should have some amount of water  as text
-- [ ] display water in view
-- [ ] test cases for components
+- [✅] Tank to display 
+- [✅] Tank 
+- [✅] Each tank should have some amount of water  as text
+- [✅] display water in view
+- [✅] test cases for components
+
+
+### Screenshot of the app
+![Screenshot from 2024-02-01 11-36-12](https://github.com/shreya-mishra/WTS-test-repo/assets/61110378/760bdc47-dc37-43d8-b21a-4657f132b3e6)
+
+### APK
+[WTS Build](https://drive.google.com/file/d/1PBQMYYtaUeqF3WtrPlpk1UWSKRLxE3Bk/view?usp=sharing)
 
