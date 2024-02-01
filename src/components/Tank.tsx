@@ -1,11 +1,31 @@
-import {View, Text, StyleSheet, Dimensions} from 'react-native';
-import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Dimensions,
+  Animated,
+  Easing,
+} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import {COLORS} from '../constant/Colors';
 const {width} = Dimensions.get('screen');
 
 const Tank = ({level}: {level: number}) => {
+  const [tankLevelHeight] = useState(new Animated.Value(0));
+
+  useEffect(() => {
+    Animated.timing(tankLevelHeight, {
+      toValue: level * 0.99,
+      duration: 500, // Adjust the duration as needed
+      easing: Easing.linear,
+      useNativeDriver: false,
+    }).start();
+  }, [level]);
+
   return (
     <View testID="tank-container" style={styles.tank}>
+      <Animated.View style={[styles.tankLevel, {height: tankLevelHeight}]} />
+
       <View style={styles.text}>
         <Text
           testID="tank-text"
