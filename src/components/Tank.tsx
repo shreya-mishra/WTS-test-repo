@@ -5,16 +5,14 @@ const {width} = Dimensions.get('screen');
 
 const Tank = ({level}: {level: number}) => {
   return (
-    <View>
-      <View style={styles.tank}>
-        <View style={styles.text}>
-          <Text
-            style={{
-              color: level > 700 ? COLORS.color_background : COLORS.color_100,
-            }}>
-            {level.toFixed(1)}Ltr
-          </Text>
-        </View>
+    <View style={styles.tank}>
+      <View style={styles.text}>
+        <Text
+          style={{
+            color: level > 700 ? COLORS.color_background : COLORS.color_100,
+          }}>
+          {level.toFixed(1)}Ltr
+        </Text>
       </View>
     </View>
   );
@@ -34,7 +32,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     overflow: 'hidden',
     position: 'relative',
-    marginTop: 20,
+    margin: 10,
     transform: [{rotate: '180deg'}],
   },
   tankLevel: {
