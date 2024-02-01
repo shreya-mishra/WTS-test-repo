@@ -15,7 +15,9 @@ const TankFrame = ({
     <View style={styles.container} testID={testID}>
       <Tank level={level} />
 
-      <Text style={styles.basket}>Tank {index + 1}</Text>
+      <Text testID={`basket-text ${index}`} style={styles.basket}>
+        Tank {index + 1}
+      </Text>
     </View>
   );
 };
