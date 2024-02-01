@@ -80,9 +80,9 @@ To learn more about React Native, take a look at the following resources:
 
 
 ### TODOs
-[] Tank to display
-[] Tank 
-[] Each tank should have some amount of water  as text
-[] display water in view
-[] test cases for components
+- [ ] Tank to display
+- [ ] Tank 
+- [ ] Each tank should have some amount of water  as text
+- [ ] display water in view
+- [ ] test cases for components
 
