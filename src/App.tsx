@@ -11,11 +11,11 @@ const App = () => {
         Water Tank Simulation
       </Text>
       <View style={styles.tankRow}>
-        {tanksArr.map((level, index) => (
+        {tanksArr.map((quantity, index) => (
           <TankFrame
             testID={`tank-frame ${index}`}
             key={index}
-            level={level}
+            quantity={quantity}
             index={index}
           />
         ))}

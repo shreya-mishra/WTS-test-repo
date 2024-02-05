@@ -10,29 +10,31 @@ import React, {useEffect, useState} from 'react';
 import {COLORS} from '../constant/Colors';
 const {width} = Dimensions.get('screen');
 
-const Tank = ({level}: {level: number}) => {
-  const [tankLevelHeight] = useState(new Animated.Value(0));
+const Tank = ({quantity}: {quantity: number}) => {
+  const [tankquantityHeight] = useState(new Animated.Value(0));
 
   useEffect(() => {
-    Animated.timing(tankLevelHeight, {
-      toValue: level * 0.99,
+    Animated.timing(tankquantityHeight, {
+      toValue: quantity * 0.99,
       duration: 500, // Adjust the duration as needed
       easing: Easing.linear,
       useNativeDriver: false,
     }).start();
-  }, [level]);
+  }, [quantity]);
 
   return (
     <View testID="tank-container" style={styles.tank}>
-      <Animated.View style={[styles.tankLevel, {height: tankLevelHeight}]} />
+      <Animated.View
+        style={[styles.tankquantity, {height: tankquantityHeight}]}
+      />
 
       <View style={styles.text}>
         <Text
           testID="tank-text"
           style={{
-            color: level > 700 ? COLORS.color_background : COLORS.color_100,
+            color: quantity > 700 ? COLORS.color_background : COLORS.color_100,
           }}>
-          {level.toFixed(1)}Ltr
+          {quantity.toFixed(1)}Ltr
         </Text>
       </View>
     </View>
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
     margin: 10,
     transform: [{rotate: '180deg'}],
   },
-  tankLevel: {
+  tankquantity: {
     position: 'relative',
     bottom: 0,
     width: '100%',

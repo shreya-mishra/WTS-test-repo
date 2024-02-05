@@ -5,7 +5,7 @@ import TankFrame from '../src/components/TankFrame';
 describe('TankFrame component', () => {
   it('applies styles correctly', () => {
     const {getByTestId} = render(
-      <TankFrame level={50} index={0} testID="tank-frame 0" />,
+      <TankFrame quantity={50} index={0} testID="tank-frame 0" />,
     );
 
     const tankFrame = getByTestId('tank-frame 0');

@@ -5,7 +5,7 @@ import {COLORS} from '../src/constant/Colors';
 
 describe('Tank component', () => {
   it('applies styles and renders text correctly', () => {
-    const {getByTestId} = render(<Tank level={800} />);
+    const {getByTestId} = render(<Tank quantity={800} />);
 
     const tankContainer = getByTestId('tank-container');
     const tankText = getByTestId('tank-text');
@@ -34,7 +34,7 @@ describe('Tank component', () => {
     expect(tankText).toHaveTextContent('800.0Ltr');
   });
   it('applies animation and renders text correctly', async () => {
-    const {getByTestId} = render(<Tank level={800} />);
+    const {getByTestId} = render(<Tank quantity={800} />);
 
     const tankContainer = getByTestId('tank-container');
     const tankText = getByTestId('tank-text');
@@ -42,7 +42,7 @@ describe('Tank component', () => {
     // Use waitFor to wait for the animation to complete
     await waitFor(() => {
       expect(tankContainer).toHaveStyle({
-        height: 100, // Assuming level * 0.99
+        height: 100, // Assuming quantity * 0.99
       });
     });
 

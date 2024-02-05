@@ -3,17 +3,17 @@ import React from 'react';
 import Tank from './Tank';
 
 const TankFrame = ({
-  level,
+  quantity,
   index,
   testID,
 }: {
-  level: number;
+  quantity: number;
   index: number;
   testID: string;
 }) => {
   return (
     <View style={styles.container} testID={testID}>
-      <Tank level={level} />
+      <Tank quantity={quantity} />
 
       <Text testID={`basket-text ${index}`} style={styles.basket}>
         Tank {index + 1}
