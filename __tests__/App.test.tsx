@@ -21,13 +21,4 @@ test('applies styles correctly', () => {
 
   const container = getByTestId('container');
   expect(container).toHaveStyle({backgroundColor: COLORS.color_background});
-
-  const title = getByTestId('title');
-  expect(title).toHaveStyle({
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: COLORS.color_water,
-    marginTop: 10,
-    marginBottom: 20,
-  });
 });

@@ -2,20 +2,12 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Tank from './Tank';
 
-const TankFrame = ({
-  level,
-  index,
-  testID,
-}: {
-  level: number;
-  index: number;
-  testID: string;
-}) => {
+const TankFrame = ({quantity, index}: {quantity: number; index: number}) => {
   return (
-    <View style={styles.container} testID={testID}>
-      <Tank level={level} />
+    <View style={styles.container} testID={`tank-frame ${index}`}>
+      <Tank quantity={quantity} />
 
-      <Text testID={`basket-text ${index}`} style={styles.basket}>
+      <Text testID={`tank-text ${index}`} style={styles.tank}>
         Tank {index + 1}
       </Text>
     </View>
@@ -32,7 +24,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: 10,
   },
-  basket: {
+  tank: {
     textAlign: 'center',
     marginTop: 8,
     fontWeight: 'bold',
