@@ -18,8 +18,8 @@ describe('TankFrame component', () => {
       margin: 10,
     });
 
-    const basketText = getByTestId('basket-text 0');
-    expect(basketText).toHaveStyle({
+    const tankText = getByTestId('tank-text 0');
+    expect(tankText).toHaveStyle({
       textAlign: 'center',
       marginTop: 8,
       fontWeight: 'bold',

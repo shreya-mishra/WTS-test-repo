@@ -15,7 +15,7 @@ const TankFrame = ({
     <View style={styles.container} testID={testID}>
       <Tank quantity={quantity} />
 
-      <Text testID={`basket-text ${index}`} style={styles.basket}>
+      <Text testID={`tank-text ${index}`} style={styles.tank}>
         Tank {index + 1}
       </Text>
     </View>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: 10,
   },
-  basket: {
+  tank: {
     textAlign: 'center',
     marginTop: 8,
     fontWeight: 'bold',
