@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {COLORS} from '../constant/Colors';
+import {limit} from '../constant/TankConstants';
 const {width} = Dimensions.get('screen');
 
 const Tank = ({quantity}: {quantity: number}) => {
@@ -15,7 +16,7 @@ const Tank = ({quantity}: {quantity: number}) => {
 
   useEffect(() => {
     Animated.timing(tankquantityHeight, {
-      toValue: quantity * 0.99,
+      toValue: quantity,
       duration: 500, // Adjust the duration as needed
       easing: Easing.linear,
       useNativeDriver: false,
@@ -32,7 +33,8 @@ const Tank = ({quantity}: {quantity: number}) => {
         <Text
           testID="tank-text"
           style={{
-            color: quantity > 700 ? COLORS.color_background : COLORS.color_100,
+            color:
+              quantity > limit ? COLORS.color_background : COLORS.color_100,
           }}>
           {quantity.toFixed(1)}Ltr
         </Text>

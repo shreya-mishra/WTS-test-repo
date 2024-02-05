@@ -2,7 +2,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import {COLORS} from './constant/Colors';
 import TankFrame from './components/TankFrame';
-import {tanksArr} from './constant/TankConstants';
+import {tankArr} from './constant/TankConstants';
 
 const App = () => {
   return (
@@ -11,13 +11,8 @@ const App = () => {
         Water Tank Simulation
       </Text>
       <View style={styles.tankRow}>
-        {tanksArr.map((quantity, index) => (
-          <TankFrame
-            testID={`tank-frame ${index}`}
-            key={index}
-            quantity={quantity}
-            index={index}
-          />
+        {tankArr.map((quantity, index) => (
+          <TankFrame key={index} quantity={quantity} index={index} />
         ))}
       </View>
     </View>

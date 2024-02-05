@@ -2,17 +2,9 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Tank from './Tank';
 
-const TankFrame = ({
-  quantity,
-  index,
-  testID,
-}: {
-  quantity: number;
-  index: number;
-  testID: string;
-}) => {
+const TankFrame = ({quantity, index}: {quantity: number; index: number}) => {
   return (
-    <View style={styles.container} testID={testID}>
+    <View style={styles.container} testID={`tank-frame ${index}`}>
       <Tank quantity={quantity} />
 
       <Text testID={`tank-text ${index}`} style={styles.tank}>
