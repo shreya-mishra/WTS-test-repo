@@ -56,16 +56,16 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     position: 'relative',
     margin: 10,
-    transform: [{rotate: '180deg'}],
+    flexDirection: 'column-reverse',
   },
   tankquantity: {
     position: 'relative',
-    bottom: 0,
     width: '100%',
     backgroundColor: COLORS.color_water,
     borderWidth: 1,
     borderColor: COLORS.color_background,
     borderRadius: 8,
+    bottom: 0,
   },
   text: {
     position: 'absolute',
@@ -74,6 +74,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     display: 'flex',
     width: width / 5,
-    transform: [{rotate: '180deg'}],
   },
 });
